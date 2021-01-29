@@ -14,6 +14,8 @@ namespace FirstWebApp
             if (!Page.IsPostBack)
             {
                Response.Write("Page Loaded First time");
+                string name=Request.Cookies["uname"].Value;
+                Label1.Text = "Welcome  " + name;
             }
             else
             {

@@ -12,6 +12,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <br />
         </div>
         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>

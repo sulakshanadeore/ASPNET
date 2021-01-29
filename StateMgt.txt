@@ -1,0 +1,17 @@
+﻿Http is a stateless protocol.
+
+It doesn't remember the previous request.
+StateMgt Techniques
+
+1) Client Side--- make the client remember
+a)Cookies
+b)QueryStrings
+c)hidden Fields
+d)ViewState
+
+
+
+2) Server Side----make the server remember--
+
+a)Session
+b)Application

@@ -1,0 +1,36 @@
+﻿workerprocess--
+iis5----aspnet_wp.exe
+iis6----w3wp.exe
+-------------------------------
+CasPol----- roles and users authentication 
+
+
+Code access policy--- 
+
+
+
+HTTPRuntime=====> HttpApplication====> HTTPPipeline--- pipeline is resposnible for executing the request with the help of the handlers.
+
+HttpPipeLine====> HttpModules
+
+Modules understand events and they can be handled by the Httphandler.
+
+-------------------
+the HttpContext object represents the context of the currently active request as it contains references to all of the vital objects you typically access during the request lifetime: Request, Response, Application, Server, Cache. At any time during request processing HttpContext.Current gives you access to all of these objects.
+-----------------
+event sequences 
+
+IIS gets the request
+Looks up a script map extension and maps to aspnet_isapi.dll
+Code hits the worker process (aspnet_wp.exe in IIS5 or w3wp.exe in IIS6)
+.NET runtime is loaded
+IsapiRuntime.ProcessRequest() called by non-managed code
+IsapiWorkerRequest created once per request
+HttpRuntime.ProcessRequest() called with Worker Request
+HttpContext Object created by passing Worker Request as input
+HttpApplication.GetApplicationInstance() called with Context to retrieve instance from pool
+HttpApplication.Init() called to start pipeline event sequence and hook up modules and handlers
+HttpApplicaton.ProcessRequest called to start processing
+Pipeline events fire
+Handlers are called and ProcessRequest method is fired
+Control returns to pipeline and post request events fire 
