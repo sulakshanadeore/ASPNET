@@ -18,6 +18,16 @@ namespace FirstWebApp
                 //ListBox1.Items.Add("Mumbai");
                 //ListBox1.Items.Add("Hyderabad");
                 //ListBox1.Items.Add("Bangalore");
+                string  pid=Request.QueryString["prodid"].ToString();
+                string pname=
+                    Request.QueryString["productname"].ToString();
+                string qty =
+                    Request.QueryString["quan"].ToString();
+
+                ListBox2.Items.Add(pid);
+                ListBox2.Items.Add(pname);
+                ListBox2.Items.Add(qty);
+
 
                 DropDownList1.Items.Add("--Select--");
                 ListItem item = new ListItem("Pune", "Hinjawadi");
