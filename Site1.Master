@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MasterPagesDemo.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <asp:Image ID="Image1" runat="server" Height="287px" ImageUrl="~/place-watermark.jpg" Width="493px" />
+                    <asp:Label ID="Label1" runat="server" BackColor="#66CCFF" BorderColor="#FF6600" BorderStyle="Dotted" Height="200px" Text="Water Mark Pvt. Ltd. " Width="525px"></asp:Label>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <asp:Label ID="Label2" runat="server" Text="All rights reserved with Watermark Pvt.L td"></asp:Label>
+                    </asp:ContentPlaceHolder>
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
