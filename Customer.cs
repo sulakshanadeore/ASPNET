@@ -9,5 +9,7 @@ namespace MVCFirstDemo.Models
     {
         public int CustomerID { get; set; }
         public string CustomerName { get; set; }
+        public int Rating { get; set; }
+        public string City { get; set; }
     }
 }
