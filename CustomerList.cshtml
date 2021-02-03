@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "CustomerList";
+}
+
+<h2>CustomerList</h2>
+
+
+<table>
+    <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+    </tr>
+
+    @*<ol type="a">*@
+
+    @foreach (var item in ViewBag.customers)
+    {
+    <tr>
+        <td>@item.CustomerID</td>
+        <td>
+            @item.CustomerName
+        </td>
+
+    </tr>
+
+            }
+        
+    </table>

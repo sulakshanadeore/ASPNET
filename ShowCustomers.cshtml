@@ -1,0 +1,31 @@
+﻿@using MVCFirstDemo.Models
+@{
+    ViewBag.Title = "ShowCustomers";
+}
+
+<h2>ShowCustomers</h2>
+<h1>@ViewData["Message"].ToString()</h1>
+<br/>
+
+<table>
+    <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+    </tr>
+
+    @*<ol type="a">*@
+
+    @foreach (Customer item in (List<Customer>)ViewData["customers"])
+    {
+        <tr>
+            <td>@item.CustomerID</td>
+            <td>
+                @item.CustomerName
+            </td>
+
+        </tr>
+
+    }
+
+</table>
+
