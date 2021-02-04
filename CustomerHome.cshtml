@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "CustomerHome";
+}
+
+<h2>CustomerHome</h2>
+
+<br />
+@{Html.RenderAction("Greeting", "Home"); }
+<form action="CustomerHome" method="post">
+    <input type="text" name="data" value="" />
+    <input type="submit" name="name" value="ShowLengthOfString" />
+</form>
+<h1>The length of string =@ViewBag.ReturnedData</h1>
